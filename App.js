@@ -17,7 +17,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        Put your text here!
+        Welcome to the intro React Native workshop!
       </Text>
     </View>
   );
