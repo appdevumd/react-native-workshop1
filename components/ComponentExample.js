@@ -3,11 +3,15 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 
 
 export default function ComponentExample(props) {
-
+  let component = "";
+  if (props.showImage) {
+    component = <Image source={require('../assets/SquareLogo.png')} />
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        Custom component!
+        Custom message: {props.message}
+        {component}
       </Text>
     </View>
   );

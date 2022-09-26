@@ -11,12 +11,24 @@ import { Button, TextInput } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
+  const [counter, setCounter] = useState(0);
+  const [message, setMessage] = useState("");
 
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
         Welcome to the intro React Native workshop!
       </Text>
+      <Button 
+        title="Click here"
+        onPress={() => {setCounter(counter + 1)}} />
+        <Text style={styles.paragraph}>{counter}</Text>
+        <Text style={styles.paragraph}>{message}</Text>
+        <TextInput 
+          style={styles.input}
+          placeholder="type something here"
+          onChangeText={(text) => {setMessage(text)}} />
+        <ComponentExample showImage={true} message="my super secret message" />
     </View>
   );
 }
