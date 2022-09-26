@@ -11,8 +11,6 @@ import { Button, TextInput } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
-  const [count, setCount] = useState(0);
-  const [message, setMessage] = useState("");
 
   return (
     <View style={styles.container}>
